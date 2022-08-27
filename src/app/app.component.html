@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <h3 class="mt-2 mb-1">List of audits | Lazy loading <span style="font-size: 12px;"><strong>({{audits.length}} of {{totalCount}})</strong></span></h3>
+  <ul class="list-group mt-3" #uiElement style="overflow-y: auto;max-height:400px;" (scroll)="onScrollLoadData()">
+    <li class="list-group-item" *ngFor="let audit of audits">
+      <span ><strong>{{audit.email ? audit.email : 'No Email entered'}}</strong></span>
+      <span >{{audit.statusCode === 200 ? 'Login success' : 'Login Failed'}}</span>
+    </li>
+  </ul>
+</div>
