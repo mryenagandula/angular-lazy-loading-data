@@ -40,7 +40,7 @@ export class AppComponent implements OnInit{
     if(nativeElement.clientHeight + Math.round(nativeElement.scrollTop) === nativeElement.scrollHeight  &&  this.audits.length !== this.totalCount){
       await this.getAudits(this.pageIndex, this.pageSize);
       this.pageIndex +=1;
-      nativeElement.scrollTop=0;
+      // nativeElement.scrollTop=0;
     }
   }
 
